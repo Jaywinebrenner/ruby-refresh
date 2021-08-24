@@ -1,0 +1,15 @@
+<h1>Posts Page</h1>
+
+<%= link_to "New Post", posts_new_path %>
+
+<% @posts.each do |post| %>
+    <br>
+    <%= post.id %>
+        <%= post.title %>
+        <%= post.subheader %>
+        <%= post.body %>
+        <%= post.author %>
+    <br>
+
+    <%= link_to "Show", post %>
+<% end %>
